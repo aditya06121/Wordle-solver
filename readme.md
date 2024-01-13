@@ -23,3 +23,5 @@
 Execute the following command on the terminal inside of the project directory:
 
 ``javac UIConnector.java && java UIConnector``
+
+#### The search algorithm implemented in this project can be used to buid a more general purpose word finder, here is the [list of all the words in english](https://raw.githubusercontent.com/dwyl/english-words/master/words.txt) for this project.

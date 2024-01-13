@@ -1,25 +1,22 @@
-//execute this for Wordle_solver version 1.0
-//This is the current UI of the program ver-1.0
-//written by aditya
-//UI connector requires extensive debugging
-//exception catching is not implemented yet
+/*
+execute this for Wordle_solver version 1.0
+This is the current UI of the program ver-1.0
+written by aditya
+UI connector requires extensive debugging
+exception catching is not implemented yet
+*/
 
 import java.util.Scanner;
 
 public class UIConnector {
-    public static void main(String[] args) throws InterruptedException {
+    public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         for (int i = 0; i <= 80; i++)
             System.out.print("_");
-        Thread.sleep(500);
-        System.out.println("\n\t\t\t\t\t\t\tWordle Solver!");
-        Thread.sleep(500);
+        System.out.println("\n\t\t\t\tWordle Solver!");
         System.out.println("Version 1.0");
-        Thread.sleep(500);
         System.out.println("First, try any word which comes to your mind");
-        Thread.sleep(500);
         System.out.println("Don't repeat the arguments which were already entered!");
-        Thread.sleep(2000);
         for (int i = 0; i < 5; i++) {
 
             System.out.print("Enter the green letters together with their position in zero index:- ");

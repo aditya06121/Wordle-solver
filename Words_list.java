@@ -1,5 +1,7 @@
-//written by aditya
-//this program stores the words provided in the words list to an ArrayList and returns that list for parsing.
+/*
+written by aditya
+this program stores the words provided in the words list to an ArrayList and returns that list for parsing.
+*/
 
 import java.util.ArrayList;
 import java.io.BufferedReader;
