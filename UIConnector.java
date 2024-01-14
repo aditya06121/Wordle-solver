@@ -33,7 +33,7 @@ public class UIConnector {
             String grey = scanner.next();
             Search.eliminator(grey);
 
-            System.out.println(Src.result_list);
+            System.out.println(Search.result_list);
 
             System.out.print("Did you get the correct word? ");
             boolean check = Boolean.parseBoolean(scanner.next());
