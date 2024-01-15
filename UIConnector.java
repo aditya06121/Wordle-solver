@@ -1,8 +1,7 @@
 /*
 execute this for Wordle_solver version 1.0
 This is the current UI of the program ver-1.0
-written by aditya
-UI connector requires extensive debugging
+written by aditya.
 exception catching is not implemented yet
 */
 
@@ -14,7 +13,7 @@ public class UIConnector {
         for (int i = 0; i <= 80; i++)
             System.out.print("_");
         System.out.println("\n\t\t\t\tWordle Solver!");
-        System.out.println("Version 1.0");
+        System.out.println("Version 1.2");
         System.out.println("First, try any word which comes to your mind");
         System.out.println("Don't repeat the arguments which were already entered!");
         for (int i = 0; i < 5; i++) {
@@ -33,7 +32,7 @@ public class UIConnector {
             String grey = scanner.next();
             Search.eliminator(grey);
 
-            System.out.println(Search.result_list);
+            System.out.println(Src.result_list);
 
             System.out.print("Did you get the correct word? ");
             boolean check = Boolean.parseBoolean(scanner.next());
