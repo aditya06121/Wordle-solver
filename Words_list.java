@@ -10,7 +10,7 @@ import java.io.IOException;
 public class Words_list {
     static ArrayList<String> list() {
         ArrayList<String> list = new ArrayList<>();  //Arraylist is created to store the words form the text file.
-        String file_path = "src/word_list.txt";
+        String file_path = "word_list.txt";
         try (BufferedReader br = new BufferedReader(new FileReader(file_path))) {
             String line;
             while ((line = br.readLine()) != null) {

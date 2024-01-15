@@ -15,7 +15,7 @@ public class Search {
     public static Map<Integer, Character> map = new HashMap<>();
 
     public static void main(String[] args) {
-        String a = "b2a0";
+        String a = "e0a4c3";
         Search.yellow_selector(a);
         System.out.println(result_list);
     }
@@ -88,14 +88,13 @@ public class Search {
                     Iterator<Map.Entry<Integer, Character>> iterator2 = map.entrySet().iterator();  // initialization of the second iterator
                     while (iterator2.hasNext()) {  // iterating over every element in the hashmap.
                         Map.Entry<Integer, Character> entry = iterator2.next();
-//                        int key = entry.getKey();     can be modified later
+                        int key = entry.getKey();
                         char value = entry.getValue();
-                        if (element.charAt(i) == value) {
+                        if ((element.charAt(i)==value) && (i!=key)){
                             count++;
-                            break;
+                            iterator2.remove();
                         }
                     }
-                    iterator2.remove();
                 }
                 if (total > count)
                     iterator.remove();
