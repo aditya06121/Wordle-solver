@@ -68,30 +68,21 @@ public class Search {
             }
         }
     }
-
-    //this function can be modified
-    //so that it also removes the letter from their mentioned index position
+    // first part of the yellow-selector search, it makes sure that in the array word_list contains the characters from the input string.
     static void yellow_selector(String input) {
         if (!Objects.equals(input, "null") && (input != null)) {
-            List<String> elementsToRemove = new ArrayList<>();
             Iterator<String> iterator = Src.result_list.iterator();
-            while (iterator.hasNext()) {  // this is iterating over EVERY WORD in the result_list.
+            while (iterator.hasNext()) {
                 String element = iterator.next();
-                Src.string_to_dictionary(input);  // initialization of hashmap to store input
+                Src.string_to_dictionary(input);
                 int total = Src.map.size();
                 int count = 0;
-                loop:
-                for (int i = 0; i < element.length(); i++) {  // iterating over every char in the element.
-                    Iterator<Map.Entry<Integer, Character>> iterator2 = Src.map.entrySet().iterator();  // initialization of the second iterator
-                    while (iterator2.hasNext()) {  // iterating over every element in the hashmap.
+                for (int i = 0; i < element.length(); i++) {
+                    Iterator<Map.Entry<Integer, Character>> iterator2 = Src.map.entrySet().iterator();
+                    while (iterator2.hasNext()) {
                         Map.Entry<Integer, Character> entry = iterator2.next();
-                        int key = entry.getKey();
                         char value = entry.getValue();
                         if ((element.charAt(i)==value)){
-                            if (i==key){
-                                elementsToRemove.add(element);
-                                break loop;
-                            }
                             count++;
                             iterator2.remove();
                         }
@@ -101,11 +92,29 @@ public class Search {
                     iterator.remove();
 
             }
-            Src.result_list.removeAll(elementsToRemove);
+            yellow_selector_filter(input);
         }
 
     }
+    // the 2nd part of the yellow-selector search, it removes the words who have the letters in the same index position as the input string.
     static void yellow_selector_filter(String input){
-
+        Src.string_to_dictionary(input);
+        boolean shouldRemove;
+        Iterator<String> iterator = Src.result_list.iterator();
+        while (iterator.hasNext()) {
+            String element = iterator.next();
+            shouldRemove = false;
+            for (Map.Entry<Integer, Character> entry : Src.map.entrySet()) {
+                int key = entry.getKey();
+                char value = entry.getValue();
+                if (element.charAt(key) == value) {
+                    shouldRemove = true;
+                    break;
+                }
+            }
+            if (shouldRemove) {
+                iterator.remove();
+            }
+        }
     }
 }
