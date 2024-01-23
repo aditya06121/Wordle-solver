@@ -1,6 +1,7 @@
 //Run UIConnector.java to launch v1
 //Src file
 // TODO: error handling in the input string.
+// TODO: error due to repetition of characters in separate search category in the input string.
 import java.util.*;
 public class Src {
     // global variable declaration

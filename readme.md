@@ -1,4 +1,4 @@
-# Wordle solver program  v1.0
+# Wordle solver program  v1.4
 
 ###### written in java
 

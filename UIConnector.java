@@ -12,10 +12,10 @@ public class UIConnector {
         Scanner scanner = new Scanner(System.in);
         for (int i = 0; i <= 80; i++)
             System.out.print("_");
-        System.out.println("\n\t\t\t\tWordle Solver!");
-        System.out.println("Version 1.2");
+        System.out.println("\n\t\t\t\t Wordle Solver!");
+        System.out.println("Version 1.4");
         System.out.println("First, try any word which comes to your mind");
-        System.out.println("Don't repeat the arguments which were already entered!");
+        System.out.println("Don't repeat the letters which were already entered!");
         for (int i = 0; i < 5; i++) {
 
             System.out.print("Enter the green letters together with their position in zero index:- ");
@@ -23,7 +23,7 @@ public class UIConnector {
             Search.green_selector(green);
 
 
-            System.out.print("Enter the yellow letters:- ");
+            System.out.print("Enter the yellow letters together with their position in zero index:- ");
             String yellow = scanner.next();
             Search.yellow_selector(yellow);
 
@@ -34,9 +34,9 @@ public class UIConnector {
 
             System.out.println(Src.result_list);
 
-            System.out.print("Did you get the correct word? ");
-            boolean check = Boolean.parseBoolean(scanner.next());
-            if (check) {
+            System.out.print("Did you get the correct word? (y/n) ");
+            String check = scanner.next();
+            if (check == "y") {
                 break;
             }
         }

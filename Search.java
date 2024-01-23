@@ -3,7 +3,6 @@ The Search code of this project
 linear search for parsing the word list
 written by aditya
 */
-// TODO: yellow-search twice appearance of letter error.
 import java.util.*;
 
 public class Search {
