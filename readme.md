@@ -1,8 +1,8 @@
-# Wordle solver program  v1.0
+# Wordle solver program  v1.4
 
 ###### written in java
 
-### To run v1.0 (cli based version) execute UIConnector.java
+### To run v1.4 (cli based version) execute UIConnector.java
 
 **Algorithm:**
 
