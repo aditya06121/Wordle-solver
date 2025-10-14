@@ -3,10 +3,13 @@
  */
 package org.solver;
 import org.solver.utils.Data;
+import org.solver.game.eliminator;
 
 public class App {
 
     public static void main(String[] args) {
+        eliminator.eliminate("abcdefghijklmnopq");
         System.out.println(Data.getWords());
+        Data.getWordCount();
     }
 }

@@ -38,5 +38,7 @@ public class Data {
         }
     }
 
-  
+   public static void getWordCount() {
+        System.out.println(WORDS.size());
+    }
 }
