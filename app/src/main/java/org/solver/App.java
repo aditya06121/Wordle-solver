@@ -4,12 +4,26 @@
 package org.solver;
 import org.solver.utils.Data;
 import org.solver.game.eliminator;
+import org.solver.game.greenSelector;
+import org.solver.game.yellowSelector;
+
 
 public class App {
 
     public static void main(String[] args) {
-        eliminator.eliminate("abcdefghijklmnopq");
-        System.out.println(Data.getWords());
-        Data.getWordCount();
+
+        eliminator.eliminate("trum");
+        yellowSelector.filterByCharactersNotAtPositions("p4");
+        eliminator.eliminate("haly");
+        yellowSelector.filterByCharactersNotAtPositions("p2");
+        greenSelector.filterByPosition("s0p1");
+        eliminator.eliminate("ec");
+        eliminator.eliminate("in");
+        eliminator.eliminate("k");
+        
+        for (String word : Data.getWords()) {
+            System.out.println(word);
     }
+    Data.getWordCount();
+}
 }
